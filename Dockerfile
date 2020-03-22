@@ -21,6 +21,7 @@ RUN set -ex \
     && apk del .build-deps
 
 # Snell-server environment variables
+ENV SERVER_PORT 49216
 ENV ARGS=
 
 EXPOSE $SERVER_PORT/tcp
