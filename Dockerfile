@@ -21,20 +21,7 @@ RUN set -ex \
     && apk del .build-deps
 
 # Snell-server environment variables
-ENV SERVER_ADDR 0.0.0.0
-ENV SERVER_PORT 49216
-ENV PSK ChangeMe!!!
-ENV OBFS http
 ENV ARGS=
-
-RUN set -ex \
-    # Genergate config file
-    && mkdir /config \
-    && echo $'[snell-server]\n\
-listen = '${SERVER_ADDR}$':'${SERVER_PORT}$'\n\
-psk = '${PSK}$'\n\
-obfs = '${OBFS}\
-        > /config/snell-server.conf
 
 EXPOSE $SERVER_PORT/tcp
 
