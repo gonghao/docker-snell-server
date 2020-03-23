@@ -29,7 +29,7 @@ EXPOSE $SERVER_PORT/tcp
 # Run as nobody
 USER nobody
 
-# Start shadowsocks-libev server
+# Start snell-server
 CMD exec snell-server \
     -c /config/snell-server.conf \
     $ARGS
