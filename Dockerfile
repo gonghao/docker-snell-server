@@ -2,8 +2,8 @@ FROM frolvlad/alpine-glibc
 
 LABEL maintainer="Howtin <gonghao@ghsky.com>"
 
-ENV SNELL_VERSION 2.0.0-b12
-ENV SNELL_TAG 2.0.0b12
+ENV SNELL_VERSION 2.0.0
+ENV SNELL_TAG 2.0.0
 
 RUN set -ex \
     # Install dependencies
